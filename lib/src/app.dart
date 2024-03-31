@@ -1,8 +1,8 @@
+import 'package:bookreview/src/test_pages/phone_test.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'home.dart';
-import 'detail.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -23,8 +23,8 @@ class _AppState extends State<App> {
         builder: (context, state) => const Home(),
       ),
       GoRoute(
-        path: "/detail",
-        builder: (context, state) => const Detail(),
+        path: "/phone",
+        builder: (context, state) => const PhoneTest(),
       ),
     ], initialLocation: "/");
     //route
@@ -35,11 +35,11 @@ class _AppState extends State<App> {
     return MaterialApp.router(
       routerConfig: router,
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-            elevation: 0,
-            backgroundColor: const Color(0xff1c1c1c),
-            titleTextStyle: TextStyle(color: Colors.white)),
-        scaffoldBackgroundColor: const Color(0xff1c1c1c),
+        appBarTheme: const AppBarTheme(elevation: 0
+            //backgroundColor: Color(0xff1c1c1c),
+            //titleTextStyle: TextStyle(color: Colors.white)
+            ),
+        //scaffoldBackgroundColor: const Color(0xff1c1c1c),
       ),
     );
   }
