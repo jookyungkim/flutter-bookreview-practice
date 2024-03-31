@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
       body: Center(
           child: GestureDetector(
         onTap: () {
-          context.go("/");
+          context.go("/detail");
         },
         child: const Text("홈"),
       )),
