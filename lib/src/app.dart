@@ -1,3 +1,4 @@
+import 'package:bookreview/src/test_pages/phone_test.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -26,7 +27,11 @@ class _AppState extends State<App> {
         path: "/detail",
         builder: (context, state) => const Detail(),
       ),
-    ], initialLocation: "/");
+      GoRoute(
+        path: "/phone",
+        builder: (context, state) => const PhoneTest(),
+      ),
+    ], initialLocation: "/phone");
     //route
   }
 
@@ -37,9 +42,9 @@ class _AppState extends State<App> {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
             elevation: 0,
-            backgroundColor: const Color(0xff1c1c1c),
+            backgroundColor: Colors.white,
             titleTextStyle: TextStyle(color: Colors.white)),
-        scaffoldBackgroundColor: const Color(0xff1c1c1c),
+        scaffoldBackgroundColor: Colors.white,
       ),
     );
   }
